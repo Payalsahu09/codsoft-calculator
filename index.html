@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculator</h1>
+        
+        <!-- Display screen for showing input and results -->
+        <div class="display-screen" id="display">0</div>
+        
+        <!-- Button grid container -->
+        <div class="button-grid">
+            <!-- Row 1: Clear and operators -->
+            <button class="btn btn-clear" onclick="clearDisplay()">C</button>
+            <button class="btn btn-operator" onclick="appendOperator('÷')">÷</button>
+            <button class="btn btn-operator" onclick="appendOperator('×')">×</button>
+            <button class="btn btn-operator" onclick="appendOperator('-')">-</button>
+            
+            <!-- Row 2: Numbers 7, 8, 9 and plus -->
+            <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+            
+            <!-- Row 3: Numbers 4, 5, 6 -->
+            <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+            
+            <!-- Row 4: Numbers 1, 2, 3 and equals (spanning 2 rows) -->
+            <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-equals" onclick="calculate()">=</button>
+            
+            <!-- Row 5: Number 0 (spanning 2 columns) -->
+            <button class="btn btn-number btn-zero" onclick="appendNumber('0')">0</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
